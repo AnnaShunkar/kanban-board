@@ -1,0 +1,21 @@
+body{
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+}
+.board{
+    display: flex;
+    flex-direction: row;
+    margin: 20px;
+    justify-content: center;
+    gap: 30px;
+    border: 1px solid black;
+    padding: 10px;
+}
+.todo-section,
+.in-progress-section,
+.done-section{
+    width: 220px;
+    height: 500px;
+    background-color: red;
+}
