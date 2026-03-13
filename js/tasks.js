@@ -7,9 +7,14 @@ function moveTaskRight(taskElement) {
   } else if (currentSection.classList.contains('in-progress-section')) {
     nextSection = document.querySelector('.done-section .tasks');
   }
-
   if (nextSection) {
     nextSection.appendChild(taskElement);
+    if (nextSection.closest('section').classList.contains('done-section')) {
+      const moveButton = taskElement.querySelector('.move-right');
+      if (moveButton) {
+        moveButton.hidden = true;
+      }
+    }
   }
 }
 
