@@ -21,7 +21,13 @@ main{
     background-color: #846ef4;
     border-radius: 10px;
 }
+footer{
+    margin-top: 30px;
+    background-color: #051477;
+}
 .desritpion{
     padding: 10px;
     margin: 20px;
+    background-color: #eadfd1;
+    box-shadow: 0 4px 6px #0000001a;
 }
