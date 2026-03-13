@@ -4,17 +4,39 @@
     margin: 20px;
     justify-content: center;
     gap: 30px;
-    padding: 10px;
+    padding: 30px;
+    box-shadow: 0 4px 6px #0000001a;
 }
 
+
+/* SECTIONS */
+section::-webkit-scrollbar {
+    display: none;
+}
 .todo-section,
 .in-progress-section,
 .done-section {
-    width: 320px;
+    flex: 1;
+    width: 300px;
     height: 600px;
+    overflow-y: auto;
+    box-sizing: border-box;
     background-color: white;
     border-radius: 10px;
+
 }
+.todo-section:hover{
+    color: orange;
+}
+.in-progress-section:hover{
+    color: violet;
+}
+.done-section:hover{
+    color: #77c405;
+}
+
+
+/* TASKS */
 .tasks{
     display: flex;
     flex-direction: column;
@@ -24,7 +46,9 @@
 }
 .task {
     display: flex;
+    gap: 10px;
     justify-content: space-between;
+    text-align: left;
     background-color: antiquewhite;
     border-radius: 6px;
     padding: 10px 12px;
@@ -34,14 +58,16 @@
 }
 .task:hover {
     transform: translateY(-2px);
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
+    box-shadow: 0 4px 8px #0000001a;
 }
+
+
+/* BUTTON */
 .move-right {
     border: none;
     border-radius: 10px;
     cursor: pointer;
 }
-
 .move-right:hover {
     background: #357ab8;
 }
