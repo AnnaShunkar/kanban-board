@@ -1,0 +1,42 @@
+.board {
+    display: flex;
+    flex-direction: row;
+    margin: 20px;
+    justify-content: center;
+    gap: 30px;
+    padding: 10px;
+}
+
+.todo-section,
+.in-progress-section,
+.done-section {
+    width: 220px;
+    height: 500px;
+    background-color: white;
+    border-radius: 10px;
+}
+.tasks{
+    display: flex;
+    flex-direction: column;
+    margin: 10px;
+    padding: 10px;
+    gap: 10px;
+}
+.task {
+    background-color: antiquewhite;
+    border-radius: 6px;
+    padding: 10px 12px;
+    margin-bottom: 10px;
+    box-shadow: 0 2px 4px #0000001a;
+    cursor: grab;
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.task:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
+}
+
+.task:active {
+    cursor: grabbing;
+}

@@ -1,0 +1,27 @@
+
+body{
+    font-family: "Space Grotesk", sans-serif;
+    font-optical-sizing: auto;
+
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    background-color: #051899;
+    margin: 0 auto;
+}
+h1{
+    font-size: 40px;
+    font-weight: bold;
+}
+header{
+    margin-bottom: 40px;
+    background-color: antiquewhite;
+}
+main{
+    background-color: #846ef4;
+    border-radius: 10px;
+}
+.desritpion{
+    padding: 10px;
+    margin: 20px;
+}
