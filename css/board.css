@@ -1,3 +1,10 @@
+:root{
+    --main-color: antiquewhite;
+    --color-accent: #357ab8;
+    --color-backgroung: #f0f0f0;
+    --box-shadow: #0000001a;
+}
+
 .board {
     display: flex;
     flex-direction: row;
@@ -8,11 +15,25 @@
     box-shadow: 0 4px 6px #0000001a;
 }
 
+/* SCROLLBAR */
+::-webkit-scrollbar {
+    width: 10px;
+}
+
+::-webkit-scrollbar-track {
+    background: var(--color-backgroung);
+    border-radius: 10px;
+}
+
+::-webkit-scrollbar-thumb {
+    background: var(--color-accent);
+    border-radius: 10px;
+    border: 2px solid var(--color-backgroung);
+}
+
 
 /* SECTIONS */
-section::-webkit-scrollbar {
-    display: none;
-}
+
 .todo-section,
 .in-progress-section,
 .done-section {
@@ -21,7 +42,7 @@ section::-webkit-scrollbar {
     height: 600px;
     overflow-y: auto;
     box-sizing: border-box;
-    background-color: white;
+    background-color: var(--color-backgroung);
     border-radius: 10px;
 
 }
@@ -46,28 +67,38 @@ section::-webkit-scrollbar {
 }
 .task {
     display: flex;
-    gap: 10px;
     justify-content: space-between;
-    text-align: left;
-    background-color: antiquewhite;
+    align-items: center;
+    background-color: var(--main-color);
     border-radius: 6px;
     padding: 10px 12px;
     margin-bottom: 10px;
-    box-shadow: 0 2px 4px #0000001a;
+    box-shadow: 0 2px 4px var(--box-shadow);
     transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+.task-text{
+    flex:1;
+    align-items: center;
 }
 .task:hover {
     transform: translateY(-2px);
-    box-shadow: 0 4px 8px #0000001a;
+    box-shadow: 0 4px 8px var(--box-shadow);
 }
 
 
 /* BUTTON */
-.move-right {
+.move-right,
+.move-left {
+    background-color: transparent;
     border: none;
     border-radius: 10px;
     cursor: pointer;
+    margin-left: auto;
 }
-.move-right:hover {
-    background: #357ab8;
+.move-right:hover,
+.move-left:hover {
+    background: var(--color-accent);
+}
+.move-left{
+    rotate: 180deg;
 }
