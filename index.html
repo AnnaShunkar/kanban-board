@@ -18,121 +18,136 @@
         <p class="desritpion">KanBan Board helps teams visualize progress, limit work-in-progress (WIP), and identify
             bottlenecks, improving efficiency and
             communication.</p>
+        <div id="auth-section">
+            <input type="text" id="username" placeholder="Enter your name">
+            <button type="button" id="login-btn" class="auth-button">Log in</button>
+            <button type="button" id="logout-btn" class="auth-button hidden">Log out</button>
+        </div>
     </header>
-    <main class="board">
-        <section class="todo-section">
-            <h2>To do:</h2>
-            <div class="tasks">
-                <div class="task">
-                    <button class="move-left" hidden><img src="./arrow.svg" width="20" height="20"></button>
-                    <div class="task-text">task</div>
-                    <button class="move-right"><img src="./arrow.svg" width="20" height="20"></button>
+    <main>
+        <section class="board" id="kanban-section">
+            <section class="todo-section">
+                <h2>To do:</h2>
+                <div class="tasks">
+                    <div class="task">
+                        <button class="move-left" hidden><img src="./arrow.svg" width="20" height="20"></button>
+                        <div class="task-text">task</div>
+                        <button class="move-right"><img src="./arrow.svg" width="20" height="20"></button>
+                    </div>
+                    <div class="task">
+                        <button class="move-left" hidden><img src="./arrow.svg" width="20" height="20"></button>
+                        <div class="task-text">task</div>
+                        <button class="move-right"><img src="./arrow.svg" width="20" height="20"></button>
+                    </div>
+                    <div class="task">
+                        <button class="move-left" hidden><img src="./arrow.svg" width="20" height="20"></button>
+                        <div class="task-text">task</div>
+                        <button class="move-right"><img src="./arrow.svg" width="20" height="20"></button>
+                    </div>
+                    <div class="task">
+                        <button class="move-left" hidden><img src="./arrow.svg" width="20" height="20"></button>
+                        <div class="task-text">task</div>
+                        <button class="move-right"><img src="./arrow.svg" width="20" height="20"></button>
+                    </div>
+                    <div class="task">
+                        <button class="move-left" hidden><img src="./arrow.svg" width="20" height="20"></button>
+                        <div class="task-text">task</div>
+                        <button class="move-right"><img src="./arrow.svg" width="20" height="20"></button>
+                    </div>
+                    <div class="task">
+                        <button class="move-left" hidden><img src="./arrow.svg" width="20" height="20"></button>
+                        <div class="task-text">task</div>
+                        <button class="move-right"><img src="./arrow.svg" width="20" height="20"></button>
+                    </div>
+                    <div class="task">
+                        <button class="move-left" hidden><img src="./arrow.svg" width="20" height="20"></button>
+                        <div class="task-text">task</div>
+                        <button class="move-right"><img src="./arrow.svg" width="20" height="20"></button>
+                    </div>
+                    <div class="task">
+                        <button class="move-left" hidden><img src="./arrow.svg" width="20" height="20"></button>
+                        <div class="task-text">task</div>
+                        <button class="move-right"><img src="./arrow.svg" width="20" height="20"></button>
+                    </div>
+                    <div class="task">
+                        <button class="move-left" hidden><img src="./arrow.svg" width="20" height="20"></button>
+                        <div class="task-text">task</div>
+                        <button class="move-right"><img src="./arrow.svg" width="20" height="20"></button>
+                    </div>
+                    <div class="task">
+                        <button class="move-left" hidden><img src="./arrow.svg" width="20" height="20"></button>
+                        <div class="task-text">task</div>
+                        <button class="move-right"><img src="./arrow.svg" width="20" height="20"></button>
+                    </div>
+                    <div class="task">
+                        <button class="move-left" hidden><img src="./arrow.svg" width="20" height="20"></button>
+                        <div class="task-text">task</div>
+                        <button class="move-right"><img src="./arrow.svg" width="20" height="20"></button>
+                    </div>
+                    <div class="task">
+                        <button class="move-left" hidden><img src="./arrow.svg" width="20" height="20"></button>
+                        <div class="task-text">task</div>
+                        <button class="move-right"><img src="./arrow.svg" width="20" height="20"></button>
+                    </div>
                 </div>
-                <div class="task">
-                    <button class="move-left" hidden><img src="./arrow.svg" width="20" height="20"></button>
-                    <div class="task-text">task</div>
-                    <button class="move-right"><img src="./arrow.svg" width="20" height="20"></button>
+            </section>
+            <section class="in-progress-section">
+                <h2> In progress:</h2>
+                <div class="tasks">
+                    <div class="task">
+                        <button class="move-left"><img src="./arrow.svg" width="20" height="20"></button>
+                        <div class="task-text">task</div>
+                        <button class="move-right"><img src="./arrow.svg" width="20" height="20"></button>
+                    </div>
+                    <div class="task">
+                        <button class="move-left"><img src="./arrow.svg" width="20" height="20"></button>
+                        <div class="task-text">task</div>
+                        <button class="move-right"><img src="./arrow.svg" width="20" height="20"></button>
+                    </div>
+                    <div class="task">
+                        <button class="move-left"><img src="./arrow.svg" width="20" height="20"></button>
+                        <div class="task-text">task</div>
+                        <button class="move-right"><img src="./arrow.svg" width="20" height="20"></button>
+                    </div>
+                    <div class="task">
+                        <button class="move-left"><img src="./arrow.svg" width="20" height="20"></button>
+                        <div class="task-text">task</div>
+                        <button class="move-right"><img src="./arrow.svg" width="20" height="20"></button>
+                    </div>
+                    <div class="task">
+                        <button class="move-left"><img src="./arrow.svg" width="20" height="20"></button>
+                        <div class="task-text">task</div>
+                        <button class="move-right"><img src="./arrow.svg" width="20" height="20"></button>
+                    </div>
+                    <div class="task">
+                        <button class="move-left"><img src="./arrow.svg" width="20" height="20"></button>
+                        <div class="task-text">task</div>
+                        <button class="move-right"><img src="./arrow.svg" width="20" height="20"></button>
+                    </div>
+            </section>
+            <section class="done-section">
+                <h2>Done:</h2>
+                <div class="tasks">
+                    <div class="task">
+                        <button class="move-left"><img src="./arrow.svg" width="20" height="20"></button>
+                        <div class="task-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quas
+                            repudiandae dolorum
+                            cupiditate debitis? Exercitationem eius id nulla maiores quam explicabo debitis asperiores,
+                            doloremque
+                            suscipit inventore hic saepe quaerat, voluptatum at?</div>
+                        <button class="move-right" hidden><img src="./arrow.svg" width="20" height="20"></button>
+                    </div>
+                    <div class="task">
+                        <button class="move-left"><img src="./arrow.svg" width="20" height="20"></button>
+                        <div class="task-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quas
+                            repudiandae dolorum
+                            cupiditate debitis? Exercitationem eius id nulla maiores quam explicabo debitis asperiores,
+                            doloremque
+                            suscipit inventore hic saepe quaerat, voluptatum at?</div>
+                        <button class="move-right" hidden><img src="./arrow.svg" width="20" height="20"></button>
+                    </div>
                 </div>
-                <div class="task">
-                    <button class="move-left" hidden><img src="./arrow.svg" width="20" height="20"></button>
-                    <div class="task-text">task</div>
-                    <button class="move-right"><img src="./arrow.svg" width="20" height="20"></button>
-                </div>
-                <div class="task">
-                    <button class="move-left" hidden><img src="./arrow.svg" width="20" height="20"></button>
-                    <div class="task-text">task</div>
-                    <button class="move-right"><img src="./arrow.svg" width="20" height="20"></button>
-                </div>
-                <div class="task">
-                    <button class="move-left" hidden><img src="./arrow.svg" width="20" height="20"></button>
-                    <div class="task-text">task</div>
-                    <button class="move-right"><img src="./arrow.svg" width="20" height="20"></button>
-                </div>
-                <div class="task">
-                    <button class="move-left" hidden><img src="./arrow.svg" width="20" height="20"></button>
-                    <div class="task-text">task</div>
-                    <button class="move-right"><img src="./arrow.svg" width="20" height="20"></button>
-                </div>
-                <div class="task">
-                    <button class="move-left" hidden><img src="./arrow.svg" width="20" height="20"></button>
-                    <div class="task-text">task</div>
-                    <button class="move-right"><img src="./arrow.svg" width="20" height="20"></button>
-                </div>
-                <div class="task">
-                    <button class="move-left" hidden><img src="./arrow.svg" width="20" height="20"></button>
-                    <div class="task-text">task</div>
-                    <button class="move-right"><img src="./arrow.svg" width="20" height="20"></button>
-                </div>
-                <div class="task">
-                    <button class="move-left" hidden><img src="./arrow.svg" width="20" height="20"></button>
-                    <div class="task-text">task</div>
-                    <button class="move-right"><img src="./arrow.svg" width="20" height="20"></button>
-                </div>
-                <div class="task">
-                    <button class="move-left" hidden><img src="./arrow.svg" width="20" height="20"></button>
-                    <div class="task-text">task</div>
-                    <button class="move-right"><img src="./arrow.svg" width="20" height="20"></button>
-                </div>
-                <div class="task">
-                    <button class="move-left" hidden><img src="./arrow.svg" width="20" height="20"></button>
-                    <div class="task-text">task</div>
-                    <button class="move-right"><img src="./arrow.svg" width="20" height="20"></button>
-                </div>
-                <div class="task">
-                    <button class="move-left" hidden><img src="./arrow.svg" width="20" height="20"></button>
-                    <div class="task-text">task</div>
-                    <button class="move-right"><img src="./arrow.svg" width="20" height="20"></button>
-                </div>
-            </div>
-        </section>
-        <section class="in-progress-section">
-            <h2> In progress:</h2>
-            <div class="tasks">
-                <div class="task">
-                    <button class="move-left"><img src="./arrow.svg" width="20" height="20"></button>
-                    <div class="task-text">task</div>
-                    <button class="move-right"><img src="./arrow.svg" width="20" height="20"></button>
-                </div>
-                <div class="task">
-                    <button class="move-left"><img src="./arrow.svg" width="20" height="20"></button>
-                    <div class="task-text">task</div>
-                    <button class="move-right"><img src="./arrow.svg" width="20" height="20"></button>
-                </div>
-                <div class="task">
-                    <button class="move-left"><img src="./arrow.svg" width="20" height="20"></button>
-                    <div class="task-text">task</div>
-                    <button class="move-right"><img src="./arrow.svg" width="20" height="20"></button>
-                </div>
-                <div class="task">
-                    <button class="move-left"><img src="./arrow.svg" width="20" height="20"></button>
-                    <div class="task-text">task</div>
-                    <button class="move-right"><img src="./arrow.svg" width="20" height="20"></button>
-                </div>
-                <div class="task">
-                    <button class="move-left"><img src="./arrow.svg" width="20" height="20"></button>
-                    <div class="task-text">task</div>
-                    <button class="move-right"><img src="./arrow.svg" width="20" height="20"></button>
-                </div>
-                <div class="task">
-                    <button class="move-left"><img src="./arrow.svg" width="20" height="20"></button>
-                    <div class="task-text">task</div>
-                    <button class="move-right"><img src="./arrow.svg" width="20" height="20"></button>
-                </div>
-        </section>
-        <section class="done-section">
-            <h2>Done:</h2>
-            <div class="tasks">
-                <div class="task">
-                    <button class="move-left"><img src="./arrow.svg" width="20" height="20"></button>
-                    <div class="task-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quas repudiandae dolorum cupiditate debitis? Exercitationem eius id nulla maiores quam explicabo debitis asperiores, doloremque suscipit inventore hic saepe quaerat, voluptatum at?</div>
-                    <button class="move-right" hidden><img src="./arrow.svg" width="20" height="20"></button>
-                </div>
-                <div class="task">
-                    <button class="move-left"><img src="./arrow.svg" width="20" height="20"></button>
-                    <div class="task-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quas repudiandae dolorum cupiditate debitis? Exercitationem eius id nulla maiores quam explicabo debitis asperiores, doloremque suscipit inventore hic saepe quaerat, voluptatum at?</div>
-                    <button class="move-right" hidden><img src="./arrow.svg" width="20" height="20"></button>
-                </div>
-            </div>
+            </section>
         </section>
     </main>
     <footer>
@@ -141,6 +156,7 @@
         <p>2026</p>
     </footer>
     <script src="./js/tasks.js"></script>
+<script src="./js/storage.js"></script>
 </body>
 
 </html>

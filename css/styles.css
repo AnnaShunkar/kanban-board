@@ -3,8 +3,8 @@
    --color-main-light: antiquewhite;
    --footer-bg: #030f58;
    --accent-color: #eadfd1;
-   --color-main: #846ef4;
 }
+
 @keyframes DecoAnimation {
     from {
         color: black;
@@ -25,22 +25,27 @@
     }
 }
 
-
+.hidden {
+    display: none !important;
+}
 
 /* MAIN */
 body{
     font-family: "Space Grotesk", sans-serif;
     font-optical-sizing: auto;
 
+    
     display: flex;
     flex-direction: column;
     text-align: center;
     background-color: var(--color-body);
     margin: 0 auto;
+    min-height: 100vh;
 }
 main {
-    background-color: var(--color-main);
-    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+    background-color: var(--color-body);
 }
 
 /* HEADER */
@@ -54,7 +59,7 @@ h1{
     animation: DecoAnimation 1s;
     animation-duration: 2s;
 }
-header{
+header{   
     margin-bottom: 40px;
     background-color: var(--color-main-light);
     background: linear-gradient(to bottom, var(--color-main-light), var(--color-body));
@@ -68,17 +73,42 @@ header{
     margin: 0 auto;
     line-height: 1.5;
 }
-
 /* FOOTER */
 
 footer{
     color: var(--color-main-light);
     padding-top: 30px;
-    margin-top: 30px;
     background-color: var(--footer-bg);
     background: linear-gradient(to top, var(--footer-bg), var(--color-body));
+    margin-top: auto;
 }
 .git-link {
     text-decoration: none;
     color: var(--color-main-light);
+}
+
+
+/* INPUT */ 
+.auth-button {
+    background: transparent;
+    color: var(--color-accent);
+    border: 2px solid var(--color-accent);
+    border-radius: 6px;
+    padding: 8px 16px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    margin-top: 20px;
+}
+
+.auth-button:hover {
+    color: var(--accent-color);
+}
+input{
+    background: transparent;
+    border: 2px solid var(--accent-color);
+    border-radius: 5px;
+    transition: all 0.3s ease;
+}
+input:hover{
+    background: var(--accent-color);
 }

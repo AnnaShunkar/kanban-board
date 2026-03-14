@@ -1,4 +1,4 @@
-function updateTaskButtons(taskElement) {
+function taskButtons(taskElement) {
     const currentSection = taskElement.closest('section');
     const leftBtn = taskElement.querySelector('.move-left');
     const rightBtn = taskElement.querySelector('.move-right');
@@ -27,8 +27,10 @@ function moveTaskRight(taskElement) {
 
     if (nextSection) {
         nextSection.appendChild(taskElement);
-        updateTaskButtons(taskElement);
-    }
+        taskButtons(taskElement);
+  }
+  const user = localStorage.getItem('user');
+  if (user) saveTasks(user);
 }
 
 function moveTaskLeft(taskElement) {
@@ -43,8 +45,10 @@ function moveTaskLeft(taskElement) {
 
     if (prevSection) {
         prevSection.appendChild(taskElement);
-        updateTaskButtons(taskElement);
-    }
+        taskButtons(taskElement);
+  }
+  const user = localStorage.getItem('user');
+  if (user) saveTasks(user);
 }
 
 document.addEventListener('click', e => {
