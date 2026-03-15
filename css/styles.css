@@ -25,9 +25,6 @@
     }
 }
 
-.hidden {
-    display: none !important;
-}
 
 /* MAIN */
 body{
@@ -112,3 +109,5 @@ input{
 input:hover{
     background: var(--accent-color);
 }
+
+

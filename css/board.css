@@ -17,6 +17,9 @@
     background-color: var(--color-main-bg);
     border-radius: 10px;
 }
+.hidden {
+    display: none;
+}
 
 /* SCROLLBAR */
 ::-webkit-scrollbar {
