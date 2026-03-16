@@ -1,3 +1,4 @@
+// --- moving 
 function taskButtons(taskElement) {
     const currentSection = taskElement.closest('section');
     const leftBtn = taskElement.querySelector('.move-left');
@@ -52,6 +53,41 @@ function moveTaskLeft(taskElement) {
         if (user && typeof saveTasks === 'function') saveTasks(user);
     }
 }
+// функция для включения inline-редактирования
+function enableInlineEditing(textDiv) {
+  textDiv.addEventListener("click", () => {
+    const currentText = textDiv.textContent;
+    const input = document.createElement("input");
+    input.type = "text";
+    input.value = currentText;
+    input.className = "task-edit";
+
+    textDiv.replaceWith(input);
+    input.focus();
+
+    const finishEdit = async () => {
+      const newText = input.value.trim() || currentText;
+      const newDiv = document.createElement("div");
+      newDiv.className = "task-text";
+      newDiv.textContent = newText;
+
+      input.replaceWith(newDiv);
+      enableInlineEditing(newDiv); // снова навешиваем обработчик
+
+      const currentUser = localStorage.getItem("user");
+      if (currentUser) {
+        await saveTasks(currentUser);
+      }
+    };
+
+    input.addEventListener("blur", finishEdit);
+    input.addEventListener("keydown", (e) => {
+      if (e.key === "Enter") {
+        finishEdit();
+      }
+    });
+  });
+};
 
 document.addEventListener('click', e => {
     const rightBtn = e.target.closest('.move-right');
