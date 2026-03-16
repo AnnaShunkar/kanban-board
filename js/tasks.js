@@ -28,9 +28,10 @@ function moveTaskRight(taskElement) {
     if (nextSection) {
         nextSection.appendChild(taskElement);
         taskButtons(taskElement);
-  }
-  const user = localStorage.getItem('user');
-  if (user) saveTasks(user);
+        
+        const user = localStorage.getItem('user');
+        if (user && typeof saveTasks === 'function') saveTasks(user);
+    }
 }
 
 function moveTaskLeft(taskElement) {
@@ -46,17 +47,19 @@ function moveTaskLeft(taskElement) {
     if (prevSection) {
         prevSection.appendChild(taskElement);
         taskButtons(taskElement);
-  }
-  const user = localStorage.getItem('user');
-  if (user) saveTasks(user);
+        
+        const user = localStorage.getItem('user');
+        if (user && typeof saveTasks === 'function') saveTasks(user);
+    }
 }
 
 document.addEventListener('click', e => {
-    if (e.target.closest('.move-right')) {
-        const taskElement = e.target.closest('.task');
-        moveTaskRight(taskElement);
-    } else if (e.target.closest('.move-left')) {
-        const taskElement = e.target.closest('.task');
-        moveTaskLeft(taskElement);
+    const rightBtn = e.target.closest('.move-right');
+    const leftBtn = e.target.closest('.move-left');
+
+    if (rightBtn) {
+        moveTaskRight(rightBtn.closest('.task'));
+    } else if (leftBtn) {
+        moveTaskLeft(leftBtn.closest('.task'));
     }
 });
