@@ -36,6 +36,7 @@ async function encryptData(data, key) {
   const encoded = encoder.encode(JSON.stringify(data));
   const iv = crypto.getRandomValues(new Uint8Array(12));
   const encrypted = await crypto.subtle.encrypt({ name: "AES-GCM", iv }, key, encoded);
+  
   return { iv: Array.from(iv), data: Array.from(new Uint8Array(encrypted)) };
 }
 
@@ -109,7 +110,7 @@ async function loadTasks(userName) {
 
   const key = await getStoredKey();
   const data = await decryptData(encrypted, key);
-
+  // console.log(data);
   clearBoard();
 
   const containers = {
