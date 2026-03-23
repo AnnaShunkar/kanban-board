@@ -15,5 +15,7 @@ Kanban boards can be physical or digital, and are adaptable to various team proc
 - hiding board until user log in
 - saving users name and data in localStorage
 5. Fix some mistakes and restructure page.
-6. Tasted it and get a final result.
+6. Hash user info and data.
+7. Add editing function for tasks, so every user can edit start tasks and save them.
+8. Tasted it and get a final result.
   
