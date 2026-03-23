@@ -106,11 +106,15 @@ async function saveTasks(userName) {
 
 async function loadTasks(userName) {
   const encrypted = JSON.parse(localStorage.getItem(`kanbanTasks_${userName}`));
-  if (!encrypted) return;
+  if (!encrypted) {
+    if (typeof normalizeTaskMarkup === "function") {
+      normalizeTaskMarkup();
+    }
+    return;
+  }
 
   const key = await getStoredKey();
   const data = await decryptData(encrypted, key);
-  // console.log(data);
   clearBoard();
 
   const containers = {
@@ -153,20 +157,27 @@ document.addEventListener("DOMContentLoaded", () => {
   document.getElementById("registerBtn").onclick = async (e) => {
     e.preventDefault();
     const name = document.getElementById("regName").value.trim();
-    if (name) {
+    const email = document.getElementById("regEmail").value.trim();
+    const password = document.getElementById("regPassword").value.trim();
+
+    if (name && email && password) {
       const user = {
         name,
-        email: document.getElementById("regEmail").value,
-        password: document.getElementById("regPassword").value
+        email,
+        password
       };
       await saveUser(user);
       localStorage.setItem("user", name);
 
-      await saveTasks(name);
+      if (!localStorage.getItem(`kanbanTasks_${name}`)) {
+        await saveTasks(name);
+      }
 
       document.getElementById("registrationModal").classList.add("hidden");
       showKanban();
       await loadTasks(name);
+    } else {
+      alert("Please fill in all registration fields");
     }
   };
 
